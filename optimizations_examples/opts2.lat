@@ -1,0 +1,19 @@
+# Comparision results are also remembered and reused.
+# Support for equivalent comparisions.
+# Creating registers (e.g. for score) only when propagation of const is no more possible.
+
+
+int main() {
+	int x = readInt(), y = readInt();
+	int score = 0;
+	if (x < y) {
+		score++;
+	}
+	if (y > x) {
+		score++;
+	}
+
+	printInt(score);
+
+	return 0;
+}

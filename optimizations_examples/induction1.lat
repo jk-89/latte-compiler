@@ -1,0 +1,15 @@
+# The simplest representation of induction variables.
+# Both `iter` and `sum` are initialized before the loop
+# and are incremented inductively by a constant (without multiplication).
+
+int main() {
+	int n = 0, sum = 0, iter;
+	while (n < 10) {
+		n++;
+		iter = 4 * n;
+		sum = iter * 3;
+	}
+	printInt(sum);
+
+	return 0;
+}

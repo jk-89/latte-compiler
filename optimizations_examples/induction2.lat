@@ -1,0 +1,14 @@
+# Induction variables are correctly generated even when their values depend on user input.
+# Multiplication is moved before the loop, and only addition is performed within the loop.
+
+int main() {
+	int n = readInt(), cnt;
+
+	while (n < 5) {
+		n = n + 2;
+		cnt = 10 * n;
+		printInt(cnt);
+	}
+
+	return 0;
+}

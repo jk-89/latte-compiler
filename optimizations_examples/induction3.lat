@@ -1,0 +1,28 @@
+# Two of the major challenges in implementation.
+# The loop’s induction variable is modified within the loop body, among other assignments.
+# Additionally, the derived induction variables depend on other derived variables (not only on `n`).
+# The dependency flow between the induction variables requires a specific order of initialization.
+
+
+int main() {
+	int n = 1;
+	int score1 = 0;
+	int score2 = 5;
+	int score3 = 0;
+	int score4 = 5;
+
+	while (n < 10) {
+		score2 = score1 + 3;
+		score1 = 7 * n;
+		n++;
+		score3 = 7 * n;
+		score4 = score3 + 3;
+	}
+
+	printInt(score1);
+	printInt(score2);
+	printInt(score3);
+	printInt(score4);
+
+	return 0;
+}

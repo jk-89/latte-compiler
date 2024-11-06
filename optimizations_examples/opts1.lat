@@ -1,0 +1,18 @@
+# Only useful variables are placed in registers.
+# Results of operations are remembered.
+
+
+int main() {
+	int n = readInt();
+	int useless = n;
+
+	printInt(n + 1);
+	printInt(1 + n);
+	{
+		int n = readInt();
+		printInt(n + 1);
+	}
+	printInt(1 + n);
+
+	return 0;
+}

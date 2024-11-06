@@ -1,0 +1,20 @@
+# Propagation of values.
+
+int f(int x) {
+	return x * x;
+}
+
+int main() {
+	int x = readInt();
+	int y = x;
+	int z = y;
+
+	printInt(z);
+	# Now new register will be created.
+	y = f(x);
+	printInt(y);
+	# However no new register for z is needed.
+	printInt(z);
+
+	return 0;
+}
