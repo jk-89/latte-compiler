@@ -1,6 +1,6 @@
 # Latte language compiler
 
-A compiler for the [Latte](https://www.mimuw.edu.pl/~ben/Zajecia/Mrj2023/Latte/) programming language, implemented in Haskell. Latte is an imperative, statically-typed language. The compiler generates [LLVM](https://pl.wikipedia.org/wiki/LLVM) code and LLVM bitcode, which can be executed directly with `lli`. It compiles code and applies several optimizations so that the generated bitcode is efficient.
+A compiler for the [Latte](https://www.mimuw.edu.pl/~ben/Zajecia/Mrj2023/Latte/) programming language, implemented in Haskell. Latte is an imperative, statically-typed language. The compiler generates [LLVM](https://en.wikipedia.org/wiki/LLVM) code and LLVM bitcode, which can be executed directly with `lli`. It compiles code and applies several optimizations so that the generated bitcode is efficient.
 
 ## Example
 
@@ -47,10 +47,10 @@ Hello World!
 ## Implemented Features
 
 * All basic instructions described [here](https://www.mimuw.edu.pl/~ben/Zajecia/Mrj2023/Latte/).
-* Block partitioning and SSA usage (no `load` or `alloca` instructions).
-* [CSE](https://en.wikipedia.org/wiki/Common_subexpression_elimination).
-* Parsing constant expressions of types Int and Bool.
-* Skipping unreachable code (after the return keyword).
+* Block partitioning and [SSA](https://en.wikipedia.org/wiki/Static_single-assignment_form) usage (no `load` or `alloca` instructions).
+* [CSE](https://en.wikipedia.org/wiki/Common_subexpression_elimination) - computing each subexpression at most once. For instance, in the code `n = x + y; m = y + x`, the addition operation would be executed only once, since both expressions involve the same operands.
+* Parsing constant expressions of types `Int` and `Bool`.
+* Skipping unreachable code (after the `return` keyword).
 * Induction variables - replacing costly operations (as multiplication) in loops by addition.
 
 ## Usage
