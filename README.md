@@ -56,7 +56,7 @@ Hello World!
 ## Usage
 
 * `make` creates the executable file `latc_llvm` in the root directory.
-* `latc_llvm program.lat` generates `program.ll` (LLVM code) and `program.bc` (LLVM bitcode which can be run with `lli`).
+* `./latc_llvm program.lat` generates `program.ll` (LLVM code) and `program.bc` (LLVM bitcode which can be run with `lli`).
 * `make clean` works in the standard way.
 
 ## Project Structure
@@ -74,7 +74,7 @@ Below are the solutions to issues that were not specified in the task descriptio
 * Statements after the `return` keyword are not type-checked (since they are unreachable).
 * Small support for characters such as "\n" in the `printString` function - these will be correctly converted to newline characters in LLVM code.
 * If the `readString()` function reads a single EOF character, the read string will be considered empty.
-* The range of Int literals is as in C ([$-2^{31}$, $2^{31} - 1$]).
-* The maximum length of a String literal is $2^{8} - 1$.
+* The range of `Int` literals is as in C ($[-2^{31}$, $2^{31} - 1]$).
+* The maximum length of a `String` literal is $2^{8} - 1$.
 * Division/modulo by zero is considered "undefined behavior".
 * Function names cannot be overwritten (e.g., it is not possible to declare both `void f()` and `string f` in the same program).
