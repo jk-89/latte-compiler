@@ -5,6 +5,8 @@ A compiler for the [Latte](https://www.mimuw.edu.pl/~ben/Zajecia/Mrj2023/Latte/)
 ## Example
 
 ```
+# test.bc file
+
 string hello() {
     return "Hello World!";
 }
@@ -34,6 +36,12 @@ int main() {
     return 0;
 }
 
+```
+```
+> echo "6" | lli test.bc
+Hello World!
+36
+720
 ```
 
 ## Implemented Features
