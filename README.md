@@ -1,6 +1,6 @@
 # Latte language compiler
 
-A compiler for the [Latte](https://www.mimuw.edu.pl/~ben/Zajecia/Mrj2023/Latte/) programming language, implemented in Haskell. Latte is an imperative, statically-typed language. The compiler generates [LLVM](https://en.wikipedia.org/wiki/LLVM) code and LLVM bitcode, which can be executed directly with `lli`. It compiles code and applies several optimizations so that the generated bitcode is efficient.
+A compiler for the [Latte](https://www.mimuw.edu.pl/~ben/Zajecia/Mrj2023/Latte/) programming language, implemented in Haskell. Latte is an imperative, statically-typed language. The compiler generates [LLVM](https://en.wikipedia.org/wiki/LLVM) (Low Level Virtual Machine) code and LLVM bitcode, which can be executed directly with `lli`. It compiles code and applies several optimizations so that the generated bitcode is efficient.
 
 ## Example
 
